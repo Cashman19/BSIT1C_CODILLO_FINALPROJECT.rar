@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header></header>
+    <section class= "head">
+     <img src="cec-fbframe-143c7846-9ce6-43f6-8a78-87c0a833a0a3.jpg" alt="Edwin's Profile Image" class="profile-img">
+     <h1> Edwin Codillo</h1>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+   </section>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff99cc;
+      padding: 10px 0;
+    }
+
+    .head {
+      margin-right: 85px;
+      margin-bottom: 2rem;
+      font-size: 24px;
+      text-align: right;
+      align-items: center;
+    }
+    
+    .head img {
+      width: 75px;
+      height: 75px;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #ff66b2;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 15px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      background-color: #ff3399;
+      border-radius: 5px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+      position: fixed;
+      right: 50;
+      bottom: 100;
+    }
+
+    .content-section {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    .social-links a {
+      color: #ff66b2;
+      text-decoration: none;
+      margin: 10px;
+      font-size: 20px;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #ff99cc;
+      text-align: center;
+      padding: 15px 0;
+      color: white;
+      position: fixed;
+      right: 60px;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .hello-kitty {
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      width: 50px;
+    }
+
+    .welcome-message {
+      text-align: center;
+      font-size: 30px;
+      margin-top: 10px;
+      color: #ff66b2;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="showSection('social')">Social Links</a>
+    <a href="#" onclick="showSection('information')">Information</a>
+    <a href="#" onclick="showSection('hobbies')">Hobbies</a>
+    <a href="#" onclick="showSection('contact')">Contact Info</a>
+  </nav>
+
+  <div class="container">
+    <div id="welcome" class="content-section active">
+      <h2 class="welcome-message">Welcome to My Website, I’m Edwin Codillo</h2>
+      <h3>Explore more about me through the tabs above!</h3>
+      <p>👇</p>
+      <p>Hi! Im Edwin Codillo, Future programmer of BSIT 1-C. If you want to enable the Voice Gesture Clap your hands three times!</p>
+    </div>
+
+    <div id="social" class="content-section">
+      <h2>Social Links</h2>
+      <div class="social-links">
+        <a href="https://www.facebook.com/edsalyasuno18" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/edsgar_18/profilecard/?igsh=MWRwZWVnd3JjdTRlZw==" target="_blank">Instagram</a>
+      </div>
+    </div>
+
+    <div id="information" class="content-section">
+      <h2>Information</h2>
+      <p>Name: Edwin Codillo</p>
+      <p>Age: 19 years old</p>
+      <p>Course: BSIT Student</p>
+      <p>Nickname: bons/eds</p>
+      <p>Status: Single</p>
+      <p>School: Partido State College </p>
+      <p>Location: Ocampo Camarines sur</p>
+      <p>Mother: Eden Codillo</p>
+      <p>Father: Ruben Codillo</p>
+      
+    </div>
+
+    <div id="hobbies" class="content-section">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Reading Books</li>
+        <li>Sleeping and eating</li>
+        <li>Playing Video Games</li>
+        <li>Listening to Music</li>
+        <li>Watching Anime</li>
+      </ul>
+    </div>
+
+    <div id="contact" class="content-section">
+      <h2>Contact Info</h2>
+      <p>Email: edwincodillo78@gmail.com</p>
+      <p>Phone: 09703880972</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Edwin Codillo. All rights reserved.</p>
+  </footer>
+
+  <img src="IMG_20241130_095943 (1).jpg" alt="Hello Kitty" class="hello-kitty">
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      const activeSection = document.getElementById(sectionId);
+      activeSection.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
